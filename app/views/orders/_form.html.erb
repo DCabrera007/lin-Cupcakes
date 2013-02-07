@@ -1,29 +1,26 @@
-<%= form_for(@order) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
-      <ul>
-      <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @order, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :Name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Name, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :Description, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Date, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Date, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :Name %><br />
-    <%= f.text_field :Name %>
-  </div>
-  <div class="field">
-    <%= f.label :Description %><br />
-    <%= f.text_area :Description %>
-  </div>
-  <div class="field">
-    <%= f.label :Date %><br />
-    <%= f.text_field :Date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                orders_path, :class => 'btn' %>
   </div>
 <% end %>

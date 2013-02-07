@@ -1,30 +1,29 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Customer -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Firstname:</b>
-  <%= @customer.FirstName %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:FirstName) %>:</strong></dt>
+  <dd><%= @customer.FirstName %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:LastName) %>:</strong></dt>
+  <dd><%= @customer.LastName %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Email) %>:</strong></dt>
+  <dd><%= @customer.Email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Address) %>:</strong></dt>
+  <dd><%= @customer.Address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:PhoneNumber) %>:</strong></dt>
+  <dd><%= @customer.PhoneNumber %></dd>
+</dl>
 
-<p>
-  <b>Lastname:</b>
-  <%= @customer.LastName %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @customer.Email %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @customer.Address %>
-</p>
-
-<p>
-  <b>Phonenumber:</b>
-  <%= @customer.PhoneNumber %>
-</p>
-
-
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              customers_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_customer_path(@customer), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              customer_path(@customer),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
