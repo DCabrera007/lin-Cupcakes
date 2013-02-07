@@ -20,12 +20,16 @@
     <%= f.text_field :LastName %>
   </div>
   <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.text_field :Email %>
+  </div>
+  <div class="field">
     <%= f.label :Address %><br />
     <%= f.text_field :Address %>
   </div>
   <div class="field">
     <%= f.label :PhoneNumber %><br />
-    <%= f.text_field :PhoneNumber %>
+    <%= f.number_field :PhoneNumber %>
   </div>
   <div class="actions">
     <%= f.submit %>

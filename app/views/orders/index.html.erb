@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>Ordername</th>
-    <th>Orderinfo</th>
+    <th>Name</th>
+    <th>Description</th>
     <th>Date</th>
     <th></th>
     <th></th>
@@ -12,8 +12,8 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.OrderName %></td>
-    <td><%= order.OrderInfo %></td>
+    <td><%= order.Name %></td>
+    <td><%= order.Description %></td>
     <td><%= order.Date %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  OrderName: 
-  OrderInfo: 
-  Date: 
+  Name: MyString
+  Description: MyText
+  Date: MyString
 
 two:
-  OrderName: 
-  OrderInfo: 
-  Date: 
+  Name: MyString
+  Description: MyText
+  Date: MyString
