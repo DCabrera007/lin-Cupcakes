@@ -3,12 +3,23 @@
     <%= f.label :Name, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :Name, :class => 'text_field' %>
+<%= link_to "New Customer", new_customer_path %>
     </div>
   </div>
+
+  <div class="control-group">
+<%= radio_button_tag(:flavor, "Vanilla") %>
+<%= label_tag(:flavor, "Vanilla") %>
+<%= radio_button_tag(:flavor, "Chocolate") %>
+<%= label_tag(:flavor, "Chocolate") %>
+<%= radio_button_tag(:flavor, "Strawberry") %>
+<%= label_tag(:flavor, "Strawberry") %>
+    </div>
+
   <div class="control-group">
     <%= f.label :Description, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_area :Description, :class => 'text_area' %>
+      <%= f.text_area :Description, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -23,8 +34,4 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 orders_path, :class => 'btn' %>
   </div>
-
-<%= check_box_tag(:pet_dog) %>
-<%= label_tag(:pet_dog, "I own a dog") %>
-
 <% end %>
