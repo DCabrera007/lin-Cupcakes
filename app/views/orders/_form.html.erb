@@ -23,4 +23,8 @@
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 orders_path, :class => 'btn' %>
   </div>
+
+<%= check_box_tag(:pet_dog) %>
+<%= label_tag(:pet_dog, "I own a dog") %>
+
 <% end %>
