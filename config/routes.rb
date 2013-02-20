@@ -1,11 +1,11 @@
 Cupcakes::Application.routes.draw do
+  resources :customers
+
+
   resources :reviews
 
 
   resources :orders
-
-
-  resources :customers
 
   root :to => 'Customers#index'
 
