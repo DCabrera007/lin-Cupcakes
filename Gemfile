@@ -7,7 +7,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'fastercsv'
 gem 'rails_admin' 
- 
+gem 'newrelic_rpm'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
