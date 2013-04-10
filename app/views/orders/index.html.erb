@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+<p>Use the "New" button at the bottom of the page to place your order, you can always use the "Edit" button to edit your order later, or the "Destroy" button if you change your mind and no longer want to place an order.</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</body>
+</html>
+
+
 <%- model_class = Order -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
